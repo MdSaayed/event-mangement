@@ -1,51 +1,127 @@
 [
-    {
-      "id": 1,
-      "title": "Rocktober Concert",
-      "description": "Experience the thrill of live rock music with our top-notch concerts featuring renowned artists and bands. Get ready for an unforgettable night of entertainment! Join us for the Rocktober Concert, an electrifying night of live rock music with top-notch performances by renowned artists and bands. Get ready to experience the thrill of powerful melodies, epic guitar solos, and unforgettable moments under the starry October sky. Don't miss this opportunity to rock your evening with us! Immerse yourself in the heart-pounding beats and soul-stirring lyrics as your favorite rock stars take the stage. From classic rock anthems to cutting-edge hits, we promise a musical journey that will leave you breathless. Our state-of-the-art sound system and mesmerizing light show will enhance your concert experience, creating an atmosphere of pure rock energy. Grab your friends and join us for a night you'll be talking about for years to come! Date: October 12, 2023",
-      "image": "https://i.ibb.co/s5Qwrng/dua-lipa-1838653-1280.jpg",
-      "eventDate": 12,
-      "eventMonth": "October"
+  {
+    "id": 1,
+    "title": "Rocktober Concert",
+    "description": "Experience the thrill of live rock music with our top-notch concerts featuring renowned artists and bands. Get ready for an unforgettable night of entertainment! Join us for the Rocktober Concert, an electrifying night of live rock music with top-notch performances by renowned artists and bands. Get ready to experience the thrill of powerful melodies, epic guitar solos, and unforgettable moments under the starry October sky. Don't miss this opportunity to rock your evening with us! Immerse yourself in the heart-pounding beats and soul-stirring lyrics as your favorite rock stars take the stage. From classic rock anthems to cutting-edge hits, we promise a musical journey that will leave you breathless. Our state-of-the-art sound system and mesmerizing light show will enhance your concert experience, creating an atmosphere of pure rock energy. Grab your friends and join us for a night you'll be talking about for years to come! Date: October 12, 2023",
+    "image": "https://i.ibb.co/s5Qwrng/dua-lipa-1838653-1280.jpg",
+    "eventdate": 12,
+    "eventmonth": "October",
+    "start": "09:00 PM",
+    "end": "12:00 AM",
+    "duration": "3 hours",
+    "performers": "Renowned rock artists and bands",
+    "agenda": "Live music performances, light show, memorable moments",
+    "specialfeatures": "State-of-the-art sound system, mesmerizing light show",
+    "contactinfo": {
+      "organizationname": "Rocktober Entertainment",
+      "email": "info@rocktoberconcert.com",
+      "phone": "+1-123-456-7890"
     },
-    {
-      "id": 2,
-      "title": "Comedy Rock Night",
-      "description": "Get ready to laugh your heart out at our Comedy Rock Night! Enjoy a night of hilarious stand-up comedy performances that will leave you in splits. Join us for an evening filled with laughter, good vibes, and unforgettable rock-themed humor. It's the perfect way to rock your October! Comedy meets rock in an explosive night of laughter and entertainment. Our lineup of stand-up comedians will tickle your funny bone with their witty jokes and humorous tales. From observational humor to side-splitting anecdotes, you'll be in stitches throughout the night. And it's not just about the laughs; we've curated an exceptional comedy rock playlist to keep the rock vibes alive. It's an event that combines the best of both worlds for an extraordinary evening. Date: October 22, 2023",
-      "image": "https://i.ibb.co/BscCvNd/hoach-le-dinh-4-Guylznl-Pk8-unsplash.jpg",
-      "eventDate": 22,
-      "eventMonth": "October"
+    "cost": "$30",
+    "category": "Concert"
+  },
+  {
+    "id": 2,
+    "title": "Comedy Rock Night",
+    "description": "Get ready to laugh your heart out at our Comedy Rock Night! Enjoy a night of hilarious stand-up comedy performances that will leave you in splits. Join us for an evening filled with laughter, good vibes, and unforgettable rock-themed humor. It's the perfect way to rock your October! Comedy meets rock in an explosive night of laughter and entertainment. Our lineup of stand-up comedians will tickle your funny bone with their witty jokes and humorous tales. From observational humor to side-splitting anecdotes, you'll be in stitches throughout the night. And it's not just about the laughs; we've curated an exceptional comedy rock playlist to keep the rock vibes alive. It's an event that combines the best of both worlds for an extraordinary evening. Date: October 22, 2023",
+    "image": "https://i.ibb.co/BscCvNd/hoach-le-dinh-4-Guylznl-Pk8-unsplash.jpg",
+    "eventdate": 22,
+    "eventmonth": "October",
+    "start": "08:00 PM",
+    "end": "12:00 AM",
+    "duration": "4 hours",
+    "performers": "Stand-up comedians and rock music",
+    "agenda": "Stand-up comedy performances, rock-themed humor, music",
+    "specialfeatures": "Exceptional comedy rock playlist",
+    "contactinfo": {
+      "organizationname": "Comedy Rock Entertainment",
+      "email": "info@comedyrocknight.com",
+      "phone": "+1-123-456-7890"
     },
-    {
-      "id": 3,
-      "title": "Movie Night Under the Stars",
-      "description": "Experience the magic of Movie Night Under the Stars! Join us for a cinematic adventure like no other. Watch your favorite rock-themed movies under the starry October sky with friends and family. It's a unique opportunity to enjoy cinema in a whole new way. Dive into the world of rock-themed movies as we bring the silver screen to the great outdoors. Our open-air cinema setup, complete with cozy seating and blankets, creates a magical atmosphere for a night of movie-watching under the stars. Enjoy classic rock films, cult favorites, and the latest rock-inspired blockbusters. Date: October 5, 2023",
-      "image": "https://i.ibb.co/K2mWqcH/aleksandr-popov-h-Tv8aa-Pzi-OQ-unsplash.jpg",
-      "eventDate": 5,
-      "eventMonth": "October"
+    "cost": "$25",
+    "category": "Comedy"
+  },
+  {
+    "id": 3,
+    "title": "Movie Night Under the Stars",
+    "description": "Experience the magic of Movie Night Under the Stars! Join us for a cinematic adventure like no other. Watch your favorite rock-themed movies under the starry October sky with friends and family. It's a unique opportunity to enjoy cinema in a whole new way. Dive into the world of rock-themed movies as we bring the silver screen to the great outdoors. Our open-air cinema setup, complete with cozy seating and blankets, creates a magical atmosphere for a night of movie-watching under the stars. Enjoy classic rock films, cult favorites, and the latest rock-inspired blockbusters. Date: October 5, 2023",
+    "image": "https://i.ibb.co/K2mWqcH/aleksandr-popov-h-Tv8aa-Pzi-OQ-unsplash.jpg",
+    "eventdate": 5,
+    "eventmonth": "October",
+    "start": "07:30 PM",
+    "end": "11:00 PM",
+    "duration": "3.5 hours",
+    "agenda": "Outdoor cinema, classic rock films, blankets, and cozy seating",
+    "specialfeatures": "Open-air cinema setup",
+    "contactinfo": {
+      "organizationname": "Starlit Cinema",
+      "email": "info@starlitcinema.com",
+      "phone": "+1-123-456-7890"
     },
-    {
-      "id": 4,
-      "title": "Dance Party Extravaganza",
-      "description": "Get ready to groove at our Dance Party Extravaganza! Dance to the beats of the hottest rock DJs and enjoy an electrifying night of dancing, music, and fun. It's the ultimate way to let loose and rock your October! Join us for a night of non-stop dancing and music that will keep you on your feet until the early hours. Our DJ lineup features the best in rock, EDM, and party music, ensuring a dance floor that's always alive and kicking. Whether you're a seasoned dancer or just looking to have a good time, our Dance Party Extravaganza has something for everyone. Date: October 18, 2023",
-      "image": "https://i.ibb.co/Sw0gGT2/kelsey-chance-t-AH2c-A-BL5g-unsplash.jpg",
-      "eventDate": 18,
-      "eventMonth": "October"
+    "cost": "$15",
+    "category": "Outdoor Cinema"
+  },
+  {
+    "id": 4,
+    "title": "Dance Party Extravaganza",
+    "description": "Get ready to groove at our Dance Party Extravaganza! Dance to the beats of the hottest rock DJs and enjoy an electrifying night of dancing, music, and fun. It's the ultimate way to let loose and rock your October! Join us for a night of non-stop dancing and music that will keep you on your feet until the early hours. Our DJ lineup features the best in rock, EDM, and party music, ensuring a dance floor that's always alive and kicking. Whether you're a seasoned dancer or just looking to have a good time, our Dance Party Extravaganza has something for everyone. Date: October 18, 2023",
+    "image": "https://i.ibb.co/Sw0gGT2/kelsey-chance-t-AH2c-A-BL5g-unsplash.jpg",
+    "eventdate": 18,
+    "eventmonth": "October",
+    "start": "08:00 PM",
+    "end": "02:00 AM",
+    "duration": "6 hours",
+    "performers": "Rock DJs, EDM, and party music",
+    "agenda": "Dance performances, DJ sets, energetic music",
+    "specialfeatures": "Lively dance floor",
+    "contactinfo": {
+      "organizationname": "Dance Party Productions",
+      "email": "info@dancepartyextravaganza.com",
+      "phone": "+1-123-456-7890"
     },
-    {
-      "id": 5,
-      "title": "Magic Rock Show Spectacular",
-      "description": "Prepare to be amazed by the world of Magic Rock! Witness mind-boggling tricks and illusions performed by skilled rock magicians at our Magic Rock Show Spectacular. It's an evening of wonder, excitement, and magical surprises that you won't forget. Experience the extraordinary as we blend the enchanting world of magic with the power of rock. Our magicians will leave you in awe with their mind-bending tricks, disappearing acts, and astonishing illusions. From card tricks that defy logic to grand stage productions, this is a show that will keep you guessing at every turn. Date: October 8, 2023",
-      "image": "https://i.ibb.co/QKv4k2L/andre-benz-Cf-Zf-Lx-KKlso-unsplash.jpg",
-      "eventDate": 8,
-      "eventMonth": "October"   
+    "cost": "$20",
+    "category": "Dance Party"
+  },
+  {
+    "id": 5,
+    "title": "Magic Rock Show Spectacular",
+    "description": "Prepare to be amazed by the world of Magic Rock! Witness mind-boggling tricks and illusions performed by skilled rock magicians at our Magic Rock Show Spectacular. It's an evening of wonder, excitement, and magical surprises that you won't forget. Experience the extraordinary as we blend the enchanting world of magic with the power of rock. Our magicians will leave you in awe with their mind-bending tricks, disappearing acts, and astonishing illusions. From card tricks that defy logic to grand stage productions, this is a show that will keep you guessing at every turn. Date: October 8, 2023",
+    "image": "https://i.ibb.co/QKv4k2L/andre-benz-Cf-Zf-Lx-KKlso-unsplash.jpg",
+    "eventdate": 8,
+    "eventmonth": "October",
+    "start": "06:30 PM",
+    "end": "08:30 PM",
+    "duration": "2 hours",
+    "performers": "Skilled rock magicians",
+    "agenda": "Mind-boggling tricks, illusions, and surprises",
+    "specialfeatures": "Astonishing magic acts",
+    "contactinfo": {
+      "organizationname": "Magic Rock Entertainment",
+      "email": "info@magicrockspectacular.com",
+      "phone": "+1-123-456-7890"
     },
-    {
-      "id": 6,
-      "title": "Rocktober Cultural Fest",
-      "description": "Experience the rich diversity of rock cultures through captivating performances, rock music, and dance at our Rocktober Cultural Fest. It's a celebration of rock entertainment, traditions, and a unique opportunity to immerse yourself in the vibrant world of rock culture. Immerse yourself in the vibrant and diverse world of rock culture at our Rocktober Cultural Fest. This unique event celebrates the rich heritage of rock music, art, and traditions from around the globe. Enjoy captivating performances by artists representing various rock genres, indulge in rock-inspired culinary delights, and explore art installations that pay homage to rock's impact on society and culture. Date: October 25, 2023",
-      "image": "https://i.ibb.co/gJTKG13/kailash-kher-4775354-1280.jpg",
-      "eventDate": 25,
-      "eventMonth": "October"
-    }
-  ]
-  
+    "cost": "$18",
+    "category": "Magic Show"
+  },
+  {
+    "id": 6,
+    "title": "Rocktober Cultural Fest",
+    "description": "Experience the rich diversity of rock cultures through captivating performances, rock music, and dance at our Rocktober Cultural Fest. It's a celebration of rock entertainment, traditions, and a unique opportunity to immerse yourself in the vibrant world of rock culture. Immerse yourself in the vibrant and diverse world of rock culture at our Rocktober Cultural Fest. This unique event celebrates the rich heritage of rock music, art, and traditions from around the globe. Enjoy captivating performances by artists representing various rock genres, indulge in rock-inspired culinary delights, and explore art installations that pay homage to rock's impact on society and culture. Date: October 25, 2023",
+    "image": "https://i.ibb.co/gJTKG13/kailash-kher-4775354-1280.jpg",
+    "eventdate": 25,
+    "eventmonth": "October",
+    "start": "10:00 AM",
+    "end": "10:00 PM",
+    "duration": "12 hours",
+    "performers": "Artists representing various rock genres",
+    "agenda": "Performances, rock-inspired culinary delights, art installations",
+    "specialfeatures": "Cultural diversity celebration",
+    "contactinfo": {
+      "organizationname": "Rocktober Cultural Fest",
+      "email": "info@rocktoberculturalfest.com",
+      "phone": "+1-123-456-7890"
+    },
+    "cost": "$10",
+    "category": "Cultural Festival"
+  }
+]
