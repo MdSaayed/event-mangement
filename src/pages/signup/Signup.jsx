@@ -54,8 +54,8 @@ const Signup = () => {
 
     return (
         <div className="bg-[url('https://i.ibb.co/9vHD5YH/Humaaans-2-Characters-1.png')] bg-cover bg-[#162cf54a]">
-            <div className='grid items-center justify-center  h-[100vh] max-w-6xl mx-auto'>
-                <div className="h-[70vh] w-[400px] flex flex-col p-12 rounded-sm justify-center items-center bg-[#FFF]">
+            <div className='grid items-center justify-center h-screen max-w-6xl mx-auto px-4 lg:px-0'>
+                <div className="min-h-[450px] max-w-[400px] flex flex-col p-12 rounded-sm justify-center items-center bg-[#FFF]">
                     <form onSubmit={handleSignUp}>
                         <label className='text-[#403F3F] font-semibold text-[1rem]' htmlFor="name">Your name</label>
                         <input className='w-full border p-[6px] my-1 rounded-sm bg-[#F3F3F3]' placeholder='Enter your name' type="name" name='name' /><br></br>

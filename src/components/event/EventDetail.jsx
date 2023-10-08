@@ -7,7 +7,7 @@ const EventDetail = ({ evt }) => {
         <div>
           <img className="h-[40vh] md:h-[45vh] lg:h-[75vh] w-full" src={evt.image} alt="" />
         </div>
-        <div className="grid grid-cols-1 md:lg:grid-cols-4 lg:grid-cols-4 gap-0 md:gap-0 lg:gap-4">
+        <div className="grid grid-cols-1 md:lg:grid-cols-4 lg:grid-cols-4 gap-0 md:gap-0 lg:gap-4  px-2 lg:px-0">
           <div className="col-span-3">
             <div className="mt-4 space-y-4">
               <h2 className="text-3xl font-bold">{evt.title}</h2>
@@ -36,14 +36,14 @@ const EventDetail = ({ evt }) => {
             </div>
           </div>
           <div className="border mt-8 p-4">
-            <div className="space-y-4">
+            <div className="space-y-2">
               <h2 className="text-[1rem]"><span className="font-bold uppercase">Performers:</span> {evt?.performers}</h2>
               <h2 className="text-[1rem]"><span className="font-bold uppercase">Agenda:</span> {evt?.agenda}</h2>
               <p className="text-[1rem]"><span className="font-bold uppercase">Duration:</span> {evt?.duration}</p>
               <p className="text-[1rem]"><span className="font-bold uppercase">Special features:</span> {evt?.specialfeatures}</p>
             </div>
-            <div>
-              <h2 className="text-[1rem] uppercase font-bold my-4">Contact Info:</h2>
+            <div className="mt-4">
+              <h2 className="text-[1rem] uppercase font-bold my-2">Contact Info:</h2>
               <table className="w-full border-collapse border">
                 <tr className="bg-gray-100">
                   <td className="border p-2 w-1/4"><span className="font-bold">Organization name</span></td>

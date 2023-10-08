@@ -6,10 +6,10 @@ import { BsFacebook, BsTwitter, BsLinkedin } from 'react-icons/bs';
 const Footer = () => {
     return (
         <div className="bg-[#0A075F]">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto py-16">
-                <div className="space-y-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto py-16 px-2 lg:px-0">
+                <div className="space-y-6 md:space-y-3 lg:space-y-3">
                     <h2 className="text-4xl font-bold">LOGO</h2>
-                    <p>Eventick is a global self-service ticketing platform for live experiences that allows anyone to create, share, find and attend events that fuel their passions and enrich their lives.</p>
+                    <p className="mb-4">Eventick is a global self-service ticketing platform for live experiences that allows anyone to create, share, find and attend events that fuel their passions and enrich their lives.</p>
                     <div className="flex gap-4">
                         <Link><BsFacebook className="text-2xl" /></Link>
                         <Link><BsTwitter className="text-2xl" /></Link>

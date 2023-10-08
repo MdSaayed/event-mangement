@@ -12,7 +12,7 @@ const Blogs = () => {
 
     return (
         <div>
-            <div className='max-w-6xl mx-auto my-16'>
+            <div className='max-w-6xl mx-auto my-16 px-2 lg:px-0'>
                 <div className='my-4'>
                     <h2 className="text-3xl font-bold text-center mt-8">Blogs</h2>
                     <p className="text-center py-4">We've had the pleasure of working with industry-defining brands. These are just some of them.</p>
