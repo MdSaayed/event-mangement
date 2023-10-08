@@ -43,7 +43,7 @@ const EventDetail = ({ evt }) => {
               <p className="text-[1rem]"><span className="font-bold uppercase">Special features:</span> {evt?.specialfeatures}</p>
             </div>
             <div>
-              <h2 className="text-xl font-bold my-4">Contact Info:</h2>
+              <h2 className="text-[1rem] uppercase font-bold my-4">Contact Info:</h2>
               <table className="w-full border-collapse border">
                 <tr className="bg-gray-100">
                   <td className="border p-2 w-1/4"><span className="font-bold">Organization name</span></td>

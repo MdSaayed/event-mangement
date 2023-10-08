@@ -1,12 +1,15 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const Signup = () => {
     const { signUpUser } = useContext(AuthContext);
-    const [err,setErr] = useState('');
-
+    const navigate = useNavigate();
+    const [errPass, setErrPass] = useState('');
+    const [errName, setErrName] = useState('');
+    const [errEmail, setErrEamil] = useState('');
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -14,37 +17,62 @@ const Signup = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        setErr('');
+        setErrPass('');
+        setErrName('');
+        setErrEamil('');
 
-        if(!(/"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/).test(password)){
-            setErr('Minimum eight characters, at least one uppercase letter, one lowercase letter and one number');
+        const pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+        if (name == '') {
+            setErrName('Name is required.')
+        }
+        if (email == '') {
+            setErrEamil('Email is required.')
+        }
+        if (!pattern.test(password)) {
+            setErrPass('Password must be minimum six characters, at least one uppercase letter, one lowercase letter and one special character.');
             return;
         }
-        signUpUser(email, password)
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
+
+
+        if (name && email && password) {
+            signUpUser(email, password)
+                .then(res => {
+                    toast.success('SignUp Successfully. Please login...');
+                    navigate('/signin');
+                    setErrPass('');
+                    setErrName('');
+                    setErrEamil('');
+                })
+                .catch(err => toast.warning(err.message));
+        }
     }
+    // ...
+
 
 
 
     return (
-        <div className="bg-[url('https://i.ibb.co/9vHD5YH/Humaaans-2-Characters-1.png')] bg-cover bg-[#bee7fe]">
+        <div className="bg-[url('https://i.ibb.co/9vHD5YH/Humaaans-2-Characters-1.png')] bg-cover bg-[#162cf54a]">
             <div className='grid items-center justify-center  h-[100vh] max-w-6xl mx-auto'>
-                <div className="h-[70vh] w-[400px] flex flex-col p-12 rounded-sm justify-center items-center bg-[#fff]">
+                <div className="h-[70vh] w-[400px] flex flex-col p-12 rounded-sm justify-center items-center bg-[#FFF]">
                     <form onSubmit={handleSignUp}>
                         <label className='text-[#403F3F] font-semibold text-[1rem]' htmlFor="name">Your name</label>
                         <input className='w-full border p-[6px] my-1 rounded-sm bg-[#F3F3F3]' placeholder='Enter your name' type="name" name='name' /><br></br>
+                        {
+                            errName ? <p className="text-[12px] text-red-600 -mt-[5px]">{errName}</p> : ''
+                        }
                         <label className='text-[#403F3F] font-semibold text-[1rem]' htmlFor="email">Email address</label>
                         <input className='w-full border p-[6px] my-1 rounded-sm bg-[#F3F3F3]' placeholder='Enter your email address' type="email" name='email' /><br></br>
-                        <label className='text-[#403F3F] font-semibold text-[1rem]' htmlFor="password">Password</label>
-                        <input className='w-full border p-[6px] my-1 rounded-sm bg-[#F3F3F3]' placeholder='Enter your password' type="password" name='password' />
                         {
-                            err? <>
-                            <p className="text-[10px] text-red-600 flex-wrap">{err}</p>
-                            </>: ''
+                            errEmail ? <p className="text-[12px] text-red-600 -mt-[5px]">{errEmail}</p> : ''
+                        }
+                        <label className='text-[#403F3F] font-semibold text-[1rem]' htmlFor="password">Password</label>
+                        <input className='w-full border p-[6px] my-1 rounded-sm' placeholder='Enter your password' type="password" name='password' />
+                        {
+                            errPass ? <p className="text-[12px] text-red-600 -mt-[5px] -mb-[26px]">{errPass}</p> : ''
                         }
                         <br></br>
-                        <input className='text-white bg-[#403F3F] text-[1rem] font-semibold rounded w-full py-[6px] mt-2' type="submit" value="Login" />
+                        <input className='text-white text-[1rem] bg-gradient-to-r from-purple-500 to-[#F5167E] font-semibold rounded w-full py-[6px] mt-2' type="submit" value="SignUp" />
                     </form>
                     <div className='text-center pt-2 text-[1rem]'>
                         <p>Dont’t Have An Account? <Link className='text-red-600' to={'/signin'}>Signin</Link></p>

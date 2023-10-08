@@ -13,10 +13,10 @@ const Header = () => {
                         <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/signin" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>SignUp</NavLink>
+                        <NavLink to="/signup" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>SignUp</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/signup" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Signin</NavLink>
+                        <NavLink to="/signin" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Signin</NavLink>
                     </li>
 
 
