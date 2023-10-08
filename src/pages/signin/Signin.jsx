@@ -8,11 +8,22 @@ import { toast } from "react-toastify";
 
 
 const Signin = () => {
-    const { signInUser } = useContext(AuthContext);
+    const { signInUser, googleSignin } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const [errEmail, setErrEmail] = useState('');
     const [errPass, setErrPass] = useState('');
+
+
+    // handle google signin
+    const handleGoogleSignin = () => {
+        googleSignin()
+            .then(res => {
+                toast.success('Login successfully.');
+                location.state ? navigate(location.state) : navigate('/');
+            })
+            .then(err => console.log(err));
+    }
 
 
 
@@ -37,7 +48,7 @@ const Signin = () => {
                     setErrEmail('');
                     setErrPass('');
                     toast.success('Login successfully.');
-                    location.state? navigate(location.state) : navigate('/');
+                    location.state ? navigate(location.state) : navigate('/');
 
                 })
                 .catch(err => toast.warning(err.message));
@@ -66,7 +77,7 @@ const Signin = () => {
                     <div className="flex flex-col gap-2 items-center mt-2">
                         <h2>Or continue with</h2>
                         <div className="flex justify-center gap-4">
-                            <Link className="text-2xl border py-1 px-4"><FcGoogle /></Link>
+                            <Link onClick={handleGoogleSignin} className="text-2xl border py-1 px-4"><FcGoogle /></Link>
                             <Link className="text-2xl border py-1 text-blue-500 px-4"><FaFacebook /></Link>
                         </div>
                     </div>
