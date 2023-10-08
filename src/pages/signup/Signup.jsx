@@ -1,11 +1,11 @@
 import { useContext, useState } from "react";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { toast } from "react-toastify";
 
 
 const Signup = () => {
-    const { signUpUser } = useContext(AuthContext);
+    const { signUpUser, signOutUser } = useContext(AuthContext);
     const navigate = useNavigate();
     const [errPass, setErrPass] = useState('');
     const [errName, setErrName] = useState('');
@@ -37,7 +37,8 @@ const Signup = () => {
         if (name && email && password) {
             signUpUser(email, password)
                 .then(res => {
-                    toast.success('SignUp Successfully. Please login...');
+                    toast.success('SignUp Successfully. Please login');
+                    signOutUser();
                     navigate('/signin');
                     setErrPass('');
                     setErrName('');

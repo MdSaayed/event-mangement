@@ -7,7 +7,7 @@ const Brands = () => {
                 <h2 className="text-3xl font-bold text-center mt-8">Join these brands</h2>
                 <p className="text-center py-4">We've had the pleasure of working with industry-defining brands. These are just some of them.</p>
             </div>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4 justify-center items-center mx-auto">
                 <img className="w-1/6 h-[2.5rem]" src="https://i.ibb.co/9WwVWd1/image-5.png" alt="" />
                 <img className="w-1/6 h-[3.2rem]" src="https://i.ibb.co/41Q84gg/image-14.png" alt="" />
                 <img className="w-1/7 h-[3.7rem]" src="https://i.ibb.co/8XhrFs9/image-15.png" alt="" />
