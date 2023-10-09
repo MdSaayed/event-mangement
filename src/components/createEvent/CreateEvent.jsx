@@ -11,7 +11,7 @@ const CreateEvent = () => {
                     </div>
                     <div className="space-y-3 text-center my-8 md:my-0 lg:my-0">
                         <h2 data-aos="fade-left" data-aos-delay="500" className="font-bold text-xl">Make your own Event </h2>
-                        <p data-aos="fade-left" data-aos-delay="800">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus mollitia nesciunt obcaecati tempora impedit saepe.</p>
+                        <p data-aos="fade-left" data-aos-delay="800">Craft your unique event with us. From themes to venues, we give you full control. Transform your vision into a memorable celebration today.</p>
                         <button data-aos="fade-left" data-aos-delay="1000" className="bg-[#F5167E] py-2 px-12 rounded-full text-white">Create Events</button>
                     </div>
                 </div>

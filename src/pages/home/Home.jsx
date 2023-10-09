@@ -23,12 +23,7 @@ const Home = () => {
                 <Brands />
             </div>
             <div>
-                <Blogs />
-            </div>
-            <div className="text-white">
-                <div>
-                    <Footer />
-                </div>
+                <Footer />
             </div>
         </div>
     );

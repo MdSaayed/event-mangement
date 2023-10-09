@@ -7,6 +7,8 @@ import EventDetails from "../components/event/EventDetails";
 import Erorr from "../pages/erorr/Erorr";
 import PrivateRoute from "./PrivateRoute";
 import PurchasedTickets from "../components/purchasedTicket/PurchasedTickets";
+import Blogs from "../components/blog/Blogs";
+import Articales from "../pages/articales/Articales";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,11 @@ const router = createBrowserRouter([
         path: 'yourticked',
         loader: () => fetch('/event.json'),
         element: <PrivateRoute><PurchasedTickets /></PrivateRoute>
+      },
+      {
+        path: 'blogs',
+        loader: () => fetch('/event.json'),
+        element: <PrivateRoute><Articales /> </PrivateRoute>
       },
       {
         path: '/signin',

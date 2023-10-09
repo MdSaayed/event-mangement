@@ -26,7 +26,7 @@ const Header = () => {
             {/* mobile and tablet navbar */}
             <nav className="md:flex justify-between items-center py-2 max-w-6xl mx-auto flex lg:hidden p-2 lg:px-0">
                 <ul>
-                    <li><NavLink className={'text-xl font-extrabold'}>LOGO</NavLink></li>
+                    <li><NavLink className={'text-xl font-extrabold'}><img className="w-2/6" src={'https://i.ibb.co/j6nPCbs/logo-removebg-preview.png'} /></NavLink></li>
                 </ul>
                 <ul>
                     <div className="flex gap-3 items-center">
@@ -53,6 +53,9 @@ const Header = () => {
                             <li className="text-xl">
                                 <NavLink to="/yourticked" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Your ticket</NavLink>
                             </li>
+                            <li className="text-xl">
+                                <NavLink to="/blogs" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Blogs</NavLink>
+                            </li>
                             {
                                 user ? <>
                                     <li className="text-xl">
@@ -73,7 +76,7 @@ const Header = () => {
             {/* desktop navbar  */}
             <nav className="md:hidden justify-between items-center py-2 max-w-6xl mx-auto hidden lg:flex">
                 <ul>
-                    <li><NavLink className={'text-xl font-extrabold'}>LOGO</NavLink></li>
+                    <li><NavLink className={'text-xl font-extrabold'}><img className="w-2/6" src={'https://i.ibb.co/j6nPCbs/logo-removebg-preview.png'} /></NavLink></li>
                 </ul>
                 <ul className="flex items-center gap-6">
                     <li>
@@ -81,6 +84,9 @@ const Header = () => {
                     </li>
                     <li>
                         <NavLink to="/yourticked" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Your ticket</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/blogs" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Blogs</NavLink>
                     </li>
                     {
                         user ? <>
