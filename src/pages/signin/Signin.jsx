@@ -51,7 +51,7 @@ const Signin = () => {
                     location.state ? navigate(location.state) : navigate('/');
 
                 })
-                .catch(err => toast.warning(err.message));
+                .catch(err => toast.warning("Password doesn't match."));
         }
     }
 

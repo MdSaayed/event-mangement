@@ -4,12 +4,13 @@ import { toast } from "react-toastify";
 import { AuthContext } from "../../providers/AuthProvider";
 import { GrClose } from 'react-icons/gr';
 import { HiBars3 } from 'react-icons/hi2';
+import { IoIosLogOut } from 'react-icons/io';
 
 
 
 const Header = () => {
     const { signOutUser, user } = useContext(AuthContext);
-    const [menu, setMenu] = useState(true);
+    const [menu, setMenu] = useState(false);
     console.log(menu)
     // user signout handle
     const handleSignOutUser = () => {
@@ -50,7 +51,7 @@ const Header = () => {
                                 <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Home</NavLink>
                             </li>
                             <li className="text-xl">
-                                <NavLink to="/yourticked" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-bold" : ""}>Your ticket</NavLink>
+                                <NavLink to="/yourticked" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Your ticket</NavLink>
                             </li>
                             {
                                 user ? <>
@@ -59,7 +60,7 @@ const Header = () => {
                                     </li>
                                 </> :
                                     <>
-                                        <li>
+                                        <li className="text-xl">
                                             <NavLink to="/signin" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Signin</NavLink>
                                         </li>
                                     </>
@@ -83,14 +84,16 @@ const Header = () => {
                     </li>
                     {
                         user ? <>
+                            <ul className="flex gap-1 items-center">
+                                <li>
+                                    <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active font-semibold" : ""}>{user?.displayName}</NavLink>
+                                </li>
+                                <li>
+                                    <img className="w-[30px] h-[30px] rounded-full" src={user?.photoURL ? user?.photoURL : 'https://i.ibb.co/8xpdsJy/user-demo.png'} alt="" />
+                                </li>
+                            </ul>
                             <li>
-                                <NavLink onClick={handleSignOutUser} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Logout</NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active font-semibold" : ""}>{user?.displayName}</NavLink>
-                            </li>
-                            <li>
-                                <img className="w-[30px] h-[30px] rounded-full" src={user?.photoURL ? user?.photoURL : 'https://i.ibb.co/8xpdsJy/user-demo.png'} alt="" />
+                                <NavLink onClick={handleSignOutUser} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active font-semibold" : ""}><IoIosLogOut className="text-[1.3rem]" /></NavLink>
                             </li>
                         </> :
                             <>
