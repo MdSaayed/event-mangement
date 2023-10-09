@@ -3,6 +3,7 @@ import Blog from './Blog';
 
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
+    const [showItems, setShowItems] = useState(3)
 
     useEffect(() => {
         fetch('blog.json')
@@ -19,8 +20,11 @@ const Blogs = () => {
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {
-                        blogs.map((blg) => <Blog key={blg.id} blg={blg} />)
+                        blogs?.slice(0, showItems)?.map((blg) => <Blog key={blg.id} blg={blg} />)
                     }
+                </div>
+                <div  className={showItems > 3? 'hidden':'flex justify-center mt-8'}>
+                    <button onClick={() => setShowItems(6)} className="py-2 px-4 md:px-6 lg:px-8 border border-blue-800 hover:bg-blue-800 text-blue-800 hover:text-white rounded-3xl">Load More</button>
                 </div>
             </div>
         </div>

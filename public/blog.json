@@ -4,41 +4,47 @@
     "title": "6 Strategies to Find Your Conference Keynote and Other Speakers",
     "description": "Discover essential strategies for finding the perfect conference keynote and other talented speakers to elevate your event.",
     "image": "https://i.ibb.co/34gdPxV/Rectangle-14.png",
-    "date": "2023-10-10"
+    "date": "Oct 10, 2023",
+    "author": "John Smith"
   },
   {
     "id": 2,
     "title": "How Successfully Used Paid Marketing to Drive Incremental Ticket Sales",
     "description": "Learn how we leveraged paid marketing to boost ticket sales and make our comedy rock shows a roaring success.",
     "image": "https://i.ibb.co/x5gZ5fq/Rectangle-14-1.png",
-    "date": "2023-10-15"
+    "date": "Oct 15, 2023",
+    "author": "Emily Johnson"
   },
   { 
     "id": 3,
     "title": "Introducing Workspaces: Work smarter, not harder with new navigation",
     "description": "Get to know our new workspace features designed to make your event planning journey smoother and more efficient.",
     "image": "https://i.ibb.co/wN4B2ff/Rectangle-14-2.png",
-    "date": "2023-10-20"
+    "date": "Oct 20, 2023",
+    "author": "Michael Davis"
   },
   {
     "id": 4,
     "title": "Dance Party Extravaganza: Groove to the Hottest Beats!",
     "description": "Discover the electrifying beats and dance moves that await you at our dance party extravaganzas featuring the hottest rock DJs.",
-    "image": "https://i.ibb.co/34gdPxV/Rectangle-14.png",
-    "date": "2023-10-25"
+    "image": "https://i.ibb.co/6JzkQVV/zumba-hair-flip-i-Stock-618745062.webp",
+    "date": "Oct 25, 2023",
+    "author": "Sarah Anderson"
   },
   {
     "id": 5,
     "title": "Magic Rock Show Spectacular: Witness Mind-Blowing Illusions!",
     "description": "Prepare to be amazed by the mind-boggling tricks and illusions performed at our magic rock show spectaculars.",
-    "image": "https://i.ibb.co/34gdPxV/Rectangle-14.png",
-    "date": "2023-10-30"
+    "image": "https://i.ibb.co/XkyyK69/download.jpg",
+    "date": "Oct 30, 2023",
+    "author": "David Garcia"
   },
   {
     "id": 6,
     "title": "Rocktober Cultural Fest: A Celebration of Rock Traditions!",
     "description": "Experience the diverse and captivating world of rock cultures through music, dance, and performances at our cultural fest.",
-    "image": "https://i.ibb.co/34gdPxV/Rectangle-14.png",
-    "date": "2023-11-05"
+    "image": "https://i.ibb.co/pfPHHMz/download-1.jpg",
+    "date": "Nov 05, 2023",
+    "author": "Linda Miller"
   }
 ]
