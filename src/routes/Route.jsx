@@ -6,9 +6,9 @@ import Signup from "../pages/signup/Signup";
 import EventDetails from "../components/event/EventDetails";
 import Erorr from "../pages/erorr/Erorr";
 import PrivateRoute from "./PrivateRoute";
-import PurchasedTickets from "../components/purchasedTicket/PurchasedTickets";
-import Blogs from "../components/blog/Blogs";
 import Articales from "../pages/articales/Articales";
+import EventDetailsPage from "../pages/eventDetailsPage/EventDetailsPage";
+import PurchaseTicketPage from "../pages/purshaseTikectPages/PurchaseTicketPage";
 
 const router = createBrowserRouter([
   {
@@ -21,19 +21,19 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: 'eventdetails/:id',
+        path: '/eventdetails/:id',
+        loader: () => fetch('/event.json'),
+        element: <PrivateRoute> <EventDetailsPage /> </PrivateRoute>
+      },
+      {
+        path: '/yourticked/eventdetails/:id',
         loader: () => fetch('/event.json'),
         element: <PrivateRoute> <EventDetails /> </PrivateRoute>
       },
       {
-        path: 'yourticked/eventdetails/:id',
+        path: '/yourticked',
         loader: () => fetch('/event.json'),
-        element: <PrivateRoute> <EventDetails /> </PrivateRoute>
-      },
-      {
-        path: 'yourticked',
-        loader: () => fetch('/event.json'),
-        element: <PrivateRoute><PurchasedTickets /></PrivateRoute>
+        element: <PrivateRoute><PurchaseTicketPage /></PrivateRoute>
       },
       {
         path: 'blogs',
