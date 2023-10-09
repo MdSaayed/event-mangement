@@ -46,15 +46,15 @@ const Header = () => {
                         <ul className={'flex shadow-sm flex-col justify-center absolute -top-9 z-10 bg-white items-center -right-2 h-[100vh] gap-4 w-[300px]'}>
                             <GrClose onClick={() => setMenu(!menu)} className={'absolute top-4 left-2 z-10'} />
 
-                            <li>
+                            <li className="text-xl">
                                 <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Home</NavLink>
                             </li>
-                            <li>
-                                <NavLink to="/yourticked" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Your ticket</NavLink>
+                            <li className="text-xl">
+                                <NavLink to="/yourticked" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-bold" : ""}>Your ticket</NavLink>
                             </li>
                             {
                                 user ? <>
-                                    <li>
+                                    <li className="text-xl">
                                         <NavLink onClick={handleSignOutUser} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Logout</NavLink>
                                     </li>
                                 </> :
