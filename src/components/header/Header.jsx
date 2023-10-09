@@ -1,11 +1,16 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../providers/AuthProvider";
+import { GrClose } from 'react-icons/gr';
+import { HiBars3 } from 'react-icons/hi2';
+
 
 
 const Header = () => {
     const { signOutUser, user } = useContext(AuthContext);
+    const [menu, setMenu] = useState(true);
+    console.log(menu)
     // user signout handle
     const handleSignOutUser = () => {
         signOutUser()
@@ -14,13 +19,62 @@ const Header = () => {
 
 
 
+
     return (
         <div className="shadow-md">
-            <nav className="flex justify-between items-center py-2 max-w-6xl mx-auto">
+            {/* mobile and tablet navbar */}
+            <nav className="md:flex justify-between items-center py-2 max-w-6xl mx-auto flex lg:hidden p-2 lg:px-0">
                 <ul>
                     <li><NavLink className={'text-xl font-extrabold'}>LOGO</NavLink></li>
                 </ul>
-                <ul className="flex gap-6">
+                <ul>
+                    <div className="flex gap-3 items-center">
+                        {
+                            user ? <>
+                                <li className="text-center uppercase">
+                                    <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active font-semibold text-[10px]" : ""}>{user?.displayName}</NavLink>
+                                </li>
+                                <li>
+                                    <img className="w-[30px] h-[30px] rounded-full" src={user?.photoURL ? user?.photoURL : 'https://i.ibb.co/8xpdsJy/user-demo.png'} alt="" />
+                                </li>
+                            </> : ''
+                        }
+                        <HiBars3 onClick={() => setMenu(!menu)} className="text-2xl" />
+                    </div>
+
+                    <ul className={menu ? "flex items-center gap-6 relative" : 'hidden'}>
+                        <ul className={'flex shadow-sm flex-col justify-center absolute -top-9 z-10 bg-white items-center -right-2 h-[100vh] gap-4 w-[300px]'}>
+                            <GrClose onClick={() => setMenu(!menu)} className={'absolute top-4 left-2 z-10'} />
+
+                            <li>
+                                <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Home</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/yourticked" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Your ticket</NavLink>
+                            </li>
+                            {
+                                user ? <>
+                                    <li>
+                                        <NavLink onClick={handleSignOutUser} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Logout</NavLink>
+                                    </li>
+                                </> :
+                                    <>
+                                        <li>
+                                            <NavLink to="/signin" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Signin</NavLink>
+                                        </li>
+                                    </>
+                            }
+                        </ul>
+                    </ul>
+                </ul>
+            </nav>
+
+            {/* desktop navbar  */}
+            <nav className="md:hidden justify-between items-center py-2 max-w-6xl mx-auto hidden lg:flex">
+                <ul>
+                    <li><NavLink className={'text-xl font-extrabold'}>LOGO</NavLink></li>
+                </ul>
+                <ul className="flex items-center gap-6">
                     <li>
                         <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active text-[#F5167E] font-semibold" : ""}>Home</NavLink>
                     </li>
@@ -32,6 +86,12 @@ const Header = () => {
                             <li>
                                 <NavLink onClick={handleSignOutUser} className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""}>Logout</NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active font-semibold" : ""}>{user?.displayName}</NavLink>
+                            </li>
+                            <li>
+                                <img className="w-[30px] h-[30px] rounded-full" src={user?.photoURL ? user?.photoURL : 'https://i.ibb.co/8xpdsJy/user-demo.png'} alt="" />
+                            </li>
                         </> :
                             <>
                                 <li>
@@ -39,6 +99,7 @@ const Header = () => {
                                 </li>
                             </>
                     }
+
                 </ul>
             </nav>
         </div>

@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 
 
 const Signup = () => {
-    const { signUpUser, signOutUser } = useContext(AuthContext);
+    const { signUpUser, signOutUser, updateUserData } = useContext(AuthContext);
     const navigate = useNavigate();
     const [errPass, setErrPass] = useState('');
     const [errName, setErrName] = useState('');
@@ -16,6 +16,7 @@ const Signup = () => {
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        const photoURL = e.target.photo.value;
 
         setErrPass('');
         setErrName('');
@@ -38,6 +39,9 @@ const Signup = () => {
             signUpUser(email, password)
                 .then(res => {
                     toast.success('SignUp Successfully. Please login');
+                    updateUserData(name, photoURL)
+                        .then()
+                        .catch()
                     signOutUser();
                     navigate('/signin');
                     setErrPass('');
@@ -45,12 +49,9 @@ const Signup = () => {
                     setErrEamil('');
                 })
                 .catch(err => toast.warning(err.message));
+
         }
     }
-    // ...
-
-
-
 
     return (
         <div className="bg-[url('https://i.ibb.co/9vHD5YH/Humaaans-2-Characters-1.png')] bg-cover bg-[#162cf54a]">
@@ -67,6 +68,9 @@ const Signup = () => {
                         {
                             errEmail ? <p className="text-[12px] text-red-600 -mt-[5px]">{errEmail}</p> : ''
                         }
+                        <label className='text-[#403F3F] font-semibold text-[1rem]' htmlFor="photo">Photo url</label>
+                        <input className='w-full border p-[6px] my-1 rounded-sm bg-[#F3F3F3]' placeholder='Enter your photo url' type="text" name='photo' /><br></br>
+                        
                         <label className='text-[#403F3F] font-semibold text-[1rem]' htmlFor="password">Password</label>
                         <input className='w-full border p-[6px] my-1 rounded-sm' placeholder='Enter your password' type="password" name='password' />
                         {
